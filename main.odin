@@ -14,7 +14,7 @@ STATES :: enum {
     MENU, GAME, WIN, LOOSE,
 }
 
-currentState: STATES = STATES.MENU;
+currentState: STATES = STATES.GAME;
 
 main :: proc() {
     rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
@@ -28,8 +28,6 @@ main :: proc() {
         }
     
         rl.BeginDrawing();
-            rl.ClearBackground(rl.BLACK);
-
             if (currentState == STATES.MENU) {
                 drawMenu();
             } else if (currentState == STATES.GAME) {

@@ -52,6 +52,8 @@ logicMenu :: proc() {
 }
 
 drawMenu :: proc() {
+    rl.ClearBackground(rl.BLACK);
+    
     titleFontSize: i32 = 20;
     titleTextWidth := rl.MeasureText(WINDOW_TITLE, titleFontSize);
 
